@@ -1,0 +1,9 @@
+package com.topi.meal.model;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Categories {
+	private Long id;
+	private String name;
+}

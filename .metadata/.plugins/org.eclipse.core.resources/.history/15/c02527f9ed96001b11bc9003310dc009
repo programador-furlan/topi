@@ -1,0 +1,13 @@
+package com.topi.meal.model;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Meals {
+	private Long id;
+	private String name;
+	private String Category;
+	private String Area;
+	private String Thumbnail;
+	private String CookingInstructions;
+}

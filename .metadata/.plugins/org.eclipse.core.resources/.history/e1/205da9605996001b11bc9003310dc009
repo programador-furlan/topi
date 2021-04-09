@@ -1,0 +1,7 @@
+package com.topi.meal.model;
+
+public class Meals {
+	private Long id;
+	private text name:
+	
+}

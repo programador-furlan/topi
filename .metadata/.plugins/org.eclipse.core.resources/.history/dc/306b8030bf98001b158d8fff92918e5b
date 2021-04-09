@@ -1,0 +1,73 @@
+package com.topi.meal.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+
+import lombok.Data;
+
+@Data
+@Entity
+public class Meals {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long meals_id;
+	
+	@Column(nullable=true, unique=true)
+	private String name;
+	
+	@Column(nullable=true)
+	private String area;
+	
+	@Column(nullable=true)
+	private String thumbnail;
+	
+	@Column(nullable=true)
+	private String cookingInstructions;
+
+	public Long getMeals_id() {
+		return meals_id;
+	}
+
+	public void setMeals_id(Long meals_id) {
+		this.meals_id = meals_id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getArea() {
+		return area;
+	}
+
+	public void setArea(String area) {
+		this.area = area;
+	}
+
+	public String getThumbnail() {
+		return thumbnail;
+	}
+
+	public void setThumbnail(String thumbnail) {
+		this.thumbnail = thumbnail;
+	}
+
+	public String getCookingInstructions() {
+		return cookingInstructions;
+	}
+
+	public void setCookingInstructions(String cookingInstructions) {
+		this.cookingInstructions = cookingInstructions;
+	}
+	
+	
+
+}

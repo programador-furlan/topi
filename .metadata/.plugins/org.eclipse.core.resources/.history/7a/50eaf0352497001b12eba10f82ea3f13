@@ -1,0 +1,30 @@
+package com.topi.meal.controller;
+
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.topi.meal.model.Meals;
+import com.topi.meal.repository.MealsRepository;
+
+@RestController
+@RequestMapping("/meals")
+public class MealController {
+	
+	@Autowired
+	private MealsRepository mealsRepository;
+	
+	@GetMapping
+	public List<Meals> listMeals() {
+		return mealsRepository.findAll();
+	}
+	
+	public Meals createMeal(Meals meal) {
+		return mealsRepository.save(meal);
+	}
+	
+}
